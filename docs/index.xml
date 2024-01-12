@@ -6,7 +6,16 @@
     <description>Recent content on 小倉唯.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 24 Dec 2023 21:59:49 +0900</lastBuildDate><atom:link href="http://xn--0vq68j2yg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jan 2024 20:39:30 +0900</lastBuildDate><atom:link href="http://xn--0vq68j2yg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTFで使えるツールまとめ（自分用）</title>
+      <link>http://xn--0vq68j2yg.com/posts/ctftool/</link>
+      <pubDate>Fri, 12 Jan 2024 20:39:30 +0900</pubDate>
+      
+      <guid>http://xn--0vq68j2yg.com/posts/ctftool/</guid>
+      <description>&lt;p&gt;CTF初心者が使えると思ったツールを備忘録としてまとめる&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>情報処理安全確保支援士試験に3ヶ月で合格する方法（再現性ゼロ）</title>
       <link>http://xn--0vq68j2yg.com/posts/passsc/</link>
