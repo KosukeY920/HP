@@ -1,0 +1,33 @@
+# The URL the site will be built for
+base_url = "https://小倉唯.com"
+title = "小倉唯.com"
+theme = "tabi"
+
+
+
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# Minufy generated HTML
+minify_html = true
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+style = "class"
+
+[extra]
+# Put all your custom variables here
+
+favicon = "images/favicon.ico"
+allowed_domains = [
+    { directive = "frame-src", domains = ["https://www.google.com"]},
+]
+
+long_date_format = "yyyy-MM-dd"
+short_date_format = "yyyy-MM-dd"
