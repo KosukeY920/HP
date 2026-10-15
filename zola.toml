@@ -26,6 +26,13 @@ style = "class"
 
 favicon = "images/favicon.ico"
 allowed_domains = [
+    { directive = "script-src", domains = ["'self'", "https://www.googletagmanager.com"] },
+    { directive = "connect-src", domains = [
+        "https://*.google-analytics.com",
+        "https://*.analytics.google.com",
+        "https://*.googletagmanager.com",
+        "https://*.google.com"
+    ]},
     { directive = "frame-src", domains = ["https://www.google.com"]},
 ]
 
