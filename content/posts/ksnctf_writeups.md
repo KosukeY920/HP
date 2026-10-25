@@ -293,3 +293,69 @@ UTCではない最初の「2012:1823」でググるとCVEで、[解説](https://
 
 ![](/images/ksnctf12-2.png)
 
+# 14 John
+以下ようなのユーザ名とハッシュ値の組が与えられる。また、問題名のJohnよりこの問題はJohn The Ripperを使用してハッシュをクラックする問題だと予想した。
+
+```
+user00:$6$Z4xEy/1KTCW.rz$Yxkc8XkscDusGWK<略>
+user01:$6$ffl1bXDBqKUiD$PoXP69PaxTTX.cgz<略>
+...
+```
+
+また、user99にて辞書ファイルのURLが与えられている。
+
+```
+user99:$6$SHA512IsStrong$DictionaryIsHere.http//ksnctf.sweetduet.info/q/14/dicti0nary_8Th64ikELWEsZFrf.txt:15491:0:99999:7:::
+```
+
+クラックする。
+
+```
+┌──(kali㉿kali)-[~/CTF/ksnctf/John]
+└─$ john j.txt --wordlist=dicti0nary_8Th64ikELWEsZFrf.txt 
+Warning: only loading hashes of type "sha512crypt", but also saw type "HMAC-SHA256"
+Use the "--format=HMAC-SHA256" option to force loading hashes of that type instead
+Using default input encoding: UTF-8
+Loaded 21 password hashes with 21 different salts (sha512crypt, crypt(3) $6$ [SHA512 256/256 AVX2 4x])
+Cost 1 (iteration count) is 5000 for all loaded hashes
+Will run 8 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+ultimate         (user08)     
+ADDITIONAL       (user02)     
+QUESTION         (user16)     
+opinion          (user15)     
+karaoke          (user17)     
+zero             (user19)     
+HELD             (user10)     
+floating         (user13)     
+DELIGHT          (user20)     
+JENNY            (user09)     
+GENDER           (user03)     
+FREQUENT         (user00)     
+__________       (user04)     
+SUFFERS          (user11)     
+SPIRITS          (user06)     
+strange          (user18)     
+applies          (user05)     
+zecht            (user14)     
+independent      (user07)     
+LATTER           (user01)     
+LEAVE            (user12)     
+21g 0:00:00:02 DONE (2026-10-25 05:00) 7.894g/s 1143p/s 14957c/s 14957C/s nineteen..ADMIRATION
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+```
+
+
+user00から、user03までの単語を順番に並べてみると、
+
+FREQUENT
+
+LATTER
+
+ADDITIONAL
+
+GENDER
+
+となり、イニシャルがFLAGになった。同様にuser00からuser20までの単語を順番に並べてフラグ獲得。
+
