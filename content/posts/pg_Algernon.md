@@ -2,7 +2,7 @@
 title = "[OSCP PEN200] ProvingGrounds Algernon Writeup"
 date = 2026-10-17T19:00:00+09:00
 description = "AlgernonマシンのWriteup"
-draft = false
+draft = true
 +++
 
 AlgernonマシンのWriteupである。
